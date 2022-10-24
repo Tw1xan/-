@@ -7,6 +7,7 @@
   margin: 0;
   border: 0;
   box-sizing: border-box;
+  font-family: inherit;
 }
 
 a {
@@ -36,7 +37,6 @@ body {
   line-height: 1;
   font-size: 16px;
   color: #48555b;
-
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
@@ -54,9 +54,10 @@ body {
 
 .header__container {
   background-image: url(../img/bg.png);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
   margin: 0 auto;
-  width: 1442px;
-  height: 769px;
   border: 1px solid;
 }
 
@@ -122,13 +123,15 @@ article {
 
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  padding-bottom: 120px;
+  flex-wrap: wrap;
 }
 
 .container__p {
   max-width: 400px;
   min-height: 115px;
-  display: block;
+  flex-direction: column;
 }
 
 h3 {
@@ -140,13 +143,25 @@ h3 {
   color: black;
 }
 
+h3::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: #16ace8;
+  width: 50px;
+  margin: 10px auto 0;
+}
+
 p.story {
   font-size: 20px;
   line-height: 23.44px;
   letter-spacing: 0.19px;
   padding-bottom: 30px;
-  max-width: 400px;
-  min-height: 115px;
+}
+
+.story2 {
+  font-size: 13px;
+  line-height: 23px;
 }
 
 p b strong a {
@@ -156,11 +171,41 @@ p b strong a {
 strong {
 }
 
+.section__img {
+  padding-left: 77px;
+}
+
 .section__img img {
-  padding-left: 10px;
+  padding-left: 15px;
 }
 
 .section__img img:first-child {
   padding-left: 0px;
 }
+
+.container__two {
+  display: flex;
+  justify-content: space-between;
+}
+
+h4 {
+  font-weight: 700;
+  letter-spacing: 2.31px;
+  color: black;
+}
+h4::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: #16ace8;
+  width: 50px;
+  margin: 10px 0;
+}
+
+.button__one {
+  border: 1px solid;
+  background-color: #16ace8;
+  color: #fff;
+}
+
 /* main end */
